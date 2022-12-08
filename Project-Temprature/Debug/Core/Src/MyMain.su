@@ -11,14 +11,14 @@
 ../Core/Inc/Manager.h:32:7:void Manager::setState(SYSTEM_STATE)	16	static
 ../Core/Inc/SdCard.h:27:8:char* SdCard::getFileName()	16	static
 ../Core/Inc/SdCard.h:28:8:char* SdCard::getErrorFileName()	16	static
-../Core/Src/MyMain.cpp:56:6:void updateLogBuffer()	80	static
-../Core/Src/MyMain.cpp:83:6:void my_main()	16	static
-../Core/Src/MyMain.cpp:108:6:void dhtTask()	8	static
-../Core/Src/MyMain.cpp:114:6:void mainTask()	216	static
-../Core/Src/MyMain.cpp:227:6:void LogWriteTask()	16	static
-../Core/Src/MyMain.cpp:238:6:void LedTask()	8	static
-../Core/Src/MyMain.cpp:247:6:void measureTemp(void*)	16	static
-../Core/Src/MyMain.cpp:259:6:void HAL_GPIO_EXTI_Callback(uint16_t)	24	static
-../Core/Src/MyMain.cpp:270:1:void __static_initialization_and_destruction_0(int, int)	24	static
-../Core/Src/MyMain.cpp:270:1:cpp)	8	static
-../Core/Src/MyMain.cpp:270:1:cpp)	8	static
+../Core/Src/MyMain.cpp:52:6:void updateLogBuffer()	80	static
+../Core/Src/MyMain.cpp:79:6:void my_main()	16	static
+../Core/Src/MyMain.cpp:104:6:void dhtTask()	8	static
+../Core/Src/MyMain.cpp:110:6:void mainTask()	216	static
+../Core/Src/MyMain.cpp:193:6:void LogWriteTask()	16	static
+../Core/Src/MyMain.cpp:205:6:void LedTask()	8	static
+../Core/Src/MyMain.cpp:215:6:void measureTemp(void*)	16	static
+../Core/Src/MyMain.cpp:227:6:void HAL_GPIO_EXTI_Callback(uint16_t)	24	static
+../Core/Src/MyMain.cpp:238:1:void __static_initialization_and_destruction_0(int, int)	24	static
+../Core/Src/MyMain.cpp:238:1:cpp)	8	static
+../Core/Src/MyMain.cpp:238:1:cpp)	8	static

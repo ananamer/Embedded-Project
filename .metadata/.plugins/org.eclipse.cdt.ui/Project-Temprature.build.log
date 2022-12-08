@@ -1,10 +1,17 @@
-11:28:33 **** Incremental Build of configuration Debug for project Project-Temprature ****
+12:21:43 **** Incremental Build of configuration Debug for project Project-Temprature ****
 make -j8 all 
+arm-none-eabi-g++ "../Core/Src/MyMain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../FATFS/Target -I../FATFS/App -I../Middlewares/Third_Party/FatFs/src -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MyMain.d" -MT"Core/Src/MyMain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MyMain.o"
+arm-none-eabi-g++ -o "Project-Temprature.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\anana\Dropbox\PC\Documents\GitHub\TempratureMonitor\Embedded-Project\Project-Temprature\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Project-Temprature.map" -Wl,--gc-sections -static "-u _printf_float" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Project-Temprature.elf
+ 
 arm-none-eabi-size   Project-Temprature.elf 
+arm-none-eabi-objdump -h -S  Project-Temprature.elf  > "Project-Temprature.list"
    text	   data	    bss	    dec	    hex	filename
-  83004	    564	  14592	  98160	  17f70	Project-Temprature.elf
+  82988	    564	  14584	  98136	  17f58	Project-Temprature.elf
 Finished building: default.size.stdout
  
+Finished building: Project-Temprature.list
+ 
 
-11:28:33 Build Finished. 0 errors, 0 warnings. (took 743ms)
+12:21:45 Build Finished. 0 errors, 0 warnings. (took 2s.171ms)
 

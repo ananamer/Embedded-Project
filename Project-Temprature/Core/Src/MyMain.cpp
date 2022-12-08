@@ -23,33 +23,29 @@
 #include <string.h>
 #include "SdCard.h"
 
-
-// Extern
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim7;
 extern I2C_HandleTypeDef hi2c1;
 extern CLI cli;
 
-
 int numOfRecords = 0;
+char  logBuffer[100];
 char RecordsArr[MAX_RECORDS][LEN_RECORD];
 
-
-LED redLed(RED_GPIO_Port, RED_Pin, LED_OFF );
-LED bluLed(BLU_GPIO_Port, BLU_Pin, LED_OFF);
-BUZ buz(BUZ_OFF);
-Button btn1(SW1_GPIO_Port, SW1_Pin);
-Button btn2(SW2_GPIO_Port, SW2_Pin);
-DHT dht(DHT11_GPIO_Port, DHT11_Pin);
-Flash Thresholds(2, 0x08080000, 1, FLASH_TYPEPROGRAM_DOUBLEWORD);
+BUZ  buz(BUZ_OFF);
 DateTime initTime;
 
-//--------------------------------
-Manager* Monitor;
-Rtc* rtc;
-SdCard* LogSdCard;
-char logBuffer[100];
+LED redLed(RED_GPIO_Port, RED_Pin, LED_OFF );
+LED  bluLed(BLU_GPIO_Port, BLU_Pin, LED_OFF);
+
+Button 	btn1(SW1_GPIO_Port, SW1_Pin);
+DHT  dht(DHT11_GPIO_Port, DHT11_Pin);
+
+Manager*    Monitor;
+Rtc*            rtc;
+SdCard*   LogSdCard;
+Flash Thresholds(2, 0x08080000, 1, FLASH_TYPEPROGRAM_DOUBLEWORD);
 
 //--------------------------------
 
@@ -61,18 +57,18 @@ void updateLogBuffer()
 	SYSTEM_STATE monitorState = Monitor->getState() ;
 	memset(logBuffer, 0, sizeof(logBuffer));
 	if( monitorState == OK   ){
-		sprintf(logBuffer, "OK! [%.2f] | %d:%d:%d - %d/%d/%d", currentTemp,
-					dateTime.hours, dateTime.min    , dateTime.sec ,
-					dateTime.day  , dateTime.month  , dateTime.year );
+//		sprintf(logBuffer, "OK! [%.2f] | %d:%d:%d - %d/%d/%d", currentTemp,
+//					dateTime.hours, dateTime.min    , dateTime.sec ,
+//					dateTime.day  , dateTime.month  , dateTime.year );
 	}
 	else if(monitorState == WARNING   ){
-		sprintf(logBuffer, "Warning! [%.2f] | %d:%d:%d - %d/%d/%d", currentTemp,
+		sprintf(logBuffer, "Warning! [%.2f] | %d:%d:%d - %d/%d/%d\r", currentTemp,
 					dateTime.hours, dateTime.min    , dateTime.sec ,
 					dateTime.day  , dateTime.month  , dateTime.year );
 
 	}
 	else if(monitorState == CRITICAL){
-		sprintf(logBuffer, "Critical! [%.2f] | %d:%d:%d - %d/%d/%d", currentTemp,
+		sprintf(logBuffer, "Critical! [%.2f] | %d:%d:%d - %d/%d/%d\r", currentTemp,
 					dateTime.hours, dateTime.min    , dateTime.sec ,
 					dateTime.day  , dateTime.month  , dateTime.year );
 
@@ -114,7 +110,6 @@ void dhtTask()
 void mainTask()
 {
 	double currentTemp = dht.getTemp();
-//	printf("\r\nFrom mainTask-temp = %f\r\n", currentTemp);
 
 	if(currentTemp < Thresholds.getWarning() ){
 		if( Monitor->getState() != OK){
@@ -153,23 +148,11 @@ void mainTask()
 				sprintf(warningRecord, "Warning! [%.2f] | %d:%d:%d - %d/%d/%d", currentTemp,
 										warningTime.hours, warningTime.min    , warningTime.sec ,
 										warningTime.day  , warningTime.month  , warningTime.year );
-//				*		Writing the record to the RecordsArray
-//				*** WRITE TO SD *********************************************************************************
+// *** WRITE TO SD
 					updateLogBuffer();
 					LogSdCard->write(LogSdCard->getErrorFileName(), logBuffer);
 
-//				*** WRITE TO SD *********************************************************************************
 
-				/*			Writing to the RecordsArr
- *
- *				if(numOfRecords < MAX_RECORDS-1){
-					strcpy(RecordsArr[numOfRecords], warningRecord);
-					numOfRecords++;
-				}
-				else{
-					printf("Error! Out Of Memory- Please clear the log!\r\n");
-				}
-*/
 			}
 
 	}
@@ -195,39 +178,23 @@ void mainTask()
 				sprintf(criticalRecord, "Critical! [%.2f] | %d:%d:%d - %d/%d/%d", currentTemp,
 										 criticalTime.hours, criticalTime.min    , criticalTime.sec ,
 										 criticalTime.day  , criticalTime.month  , criticalTime.year );
-//				*		Writing the record to the RecordsArray
-//				*** WRITE TO SD *********************************************************************************
+// *** WRITE TO SD
 				updateLogBuffer();
 				LogSdCard->write(LogSdCard->getErrorFileName(), logBuffer);
 
-//				*** WRITE TO SD *********************************************************************************
-
-/*			Writing to the RecordsArr
- *
- * 					if(numOfRecords < MAX_RECORDS-1){
-					strcpy(RecordsArr[numOfRecords], criticalRecord);
-					numOfRecords++;
-					}
-				else{
-					printf("Error! Out Of Memory- Please clear the log!\r\n");
-				}
-*/
 			}
 
 	}
 
 
 }
-//				*** WRITE TO SD *********************************************************************************
-//				updateLogBuffer();
-//				logSdCard->write(LogSdCard->getErrorFileName(), logBuffer);
-//				*** WRITE TO SD *********************************************************************************
 
 
 void LogWriteTask()
 {
 	osDelay(1000);
 //	LogSdCard->mount();
+// 	*no need for mount(), in the constructor I do mount().
 	while(1){
 		updateLogBuffer();
 		LogSdCard->write(LogSdCard->getFileName(), logBuffer);
@@ -243,7 +210,8 @@ void LedTask()
 }
 
 
-
+// No need for this func
+// [DELETE]
 void measureTemp(void *argument)
 {
 	while(1){
@@ -271,50 +239,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin)
 
 
 
-
-
-
-//	while(1)
-//	{
-//		double tmp = dht.getTemp();
-//		printf("from LedTask Temp = %f\r\n", tmp);
-//
-//		SYSTEM_STATE currentState =  Monitor->getState();
-//		if(dht.getTemp() < (double)Thresholds.getWarning()){
-//			// state ok
-//			bluLed.LedOn();
-//			redLed.LedOFF();
-//			buz.buzzStop();
-//		}
-//		else {
-//			bluLed.LedOFF();
-//			if(dht.getTemp() < (double)Thresholds.getCritical() ){
-//				// state warning
-//				redLed.LedOn();
-//				buz.buzzStart();
-//			}
-//			else{
-//				redLed.LedBlink();
-//				buz.buzzStart();
-//			}
-//		}
-//		osDelay(1000);
-//	}
-
-
-
 /*
- * if ( temp<warning)
- * 		state = ok
- * else
- * 		if ( warning =< temp < critical)
- * 			state = warning
- *
- * else
- * 		if ( temp > critical && btn.state = 0)
- * 			state = critical
- * 		if ( temp > critical && btn.state = 1)
- * 			state = critical_no_buzzer
  *------------------------------------
 
  * switch Manager.getState
