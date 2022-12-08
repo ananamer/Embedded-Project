@@ -27,7 +27,7 @@ void SdCard::print(char* fileName)
 	}
 
 	while(f_gets(line, sizeof(line), &_fil)){
-		printf("%s\r\n", line);
+		printf("%s\r", line);
 	}
 	printf("\r\n");
 	f_close(&_fil);
