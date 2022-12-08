@@ -1,0 +1,38 @@
+!SESSION 2022-12-08 11:25:19.363 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\anana\Dropbox\PC\Documents\GitHub\TempratureMonitor\Embedded-Project\Project-Temprature\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\anana\Dropbox\PC\Documents\GitHub\TempratureMonitor\Embedded-Project C:\Users\anana\Dropbox\PC\Documents\GitHub\TempratureMonitor\Embedded-Project\Project-Temprature\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-12-08 11:25:25.422
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-12-08 11:25:25.494
+!MESSAGE Log4j initialized with config file C:\Users\anana\Dropbox\PC\Documents\GitHub\TempratureMonitor\Embedded-Project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-08 11:25:28.549
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-08 11:25:39.631
+!MESSAGE Indexed 'Project-Temprature' (57 sources, 284 headers) in 8.87 sec: 27,232 declarations; 120,587 references; 9 unresolved inclusions; 416 syntax errors; 2,874 unresolved names (1.9%)
+!SESSION 2022-12-08 11:26:43.678 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\anana\Dropbox\PC\Documents\GitHub\TempratureMonitor\Embedded-Project\Project-Temprature\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\anana\Dropbox\PC\Documents\GitHub\TempratureMonitor\Embedded-Project\Project-Temprature\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-12-08 11:26:54.461
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-12-08 11:26:54.531
+!MESSAGE Log4j initialized with config file C:\Users\anana\Dropbox\PC\Documents\GitHub\TempratureMonitor\Embedded-Project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-12-08 11:27:02.075
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-08 11:27:11.062
+!MESSAGE Indexed 'Project-Temprature' (57 sources, 285 headers) in 8.67 sec: 27,642 declarations; 123,317 references; 3 unresolved inclusions; 295 syntax errors; 1,092 unresolved names (0.72%)

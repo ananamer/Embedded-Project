@@ -1,0 +1,6 @@
+../Core/Src/commTask.cpp:27:6:void commTask()	8	static
+../Core/Src/commTask.cpp:36:5:int communication()	16	static
+../Core/Src/commTask.cpp:76:6:void handleCommand()	16	static
+../Core/Src/commTask.cpp:98:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/commTask.cpp:98:1:cpp)	8	static
+../Core/Src/commTask.cpp:98:1:cpp)	8	static

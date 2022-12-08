@@ -1,0 +1,8 @@
+../Core/Src/Flash.cpp:12:1:Flash::Flash()	16	static
+../Core/Src/Flash.cpp:17:1:Flash::~Flash()	16	static
+../Core/Src/Flash.cpp:17:1:virtual Flash::~Flash()	16	static
+../Core/Src/Flash.cpp:21:19:HAL_StatusTypeDef Flash::erasePage()	40	static
+../Core/Src/Flash.cpp:45:19:HAL_StatusTypeDef Flash::writeToPage(void*, int)	40	static
+../Core/Src/Flash.cpp:65:6:void Flash::setWarning(int)	24	static
+../Core/Src/Flash.cpp:86:6:void Flash::setCritical(int)	24	static
+../Core/Src/Flash.cpp:107:6:void Flash::printThresHolds()	24	static
