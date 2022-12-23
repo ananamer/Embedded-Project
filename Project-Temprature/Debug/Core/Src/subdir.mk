@@ -17,11 +17,9 @@ CPP_SRCS += \
 ../Core/Src/BUZ.cpp \
 ../Core/Src/Button.cpp \
 ../Core/Src/CLI.cpp \
-../Core/Src/CliCommand.cpp \
 ../Core/Src/DHT.cpp \
 ../Core/Src/Flash.cpp \
 ../Core/Src/LED.cpp \
-../Core/Src/Manager.cpp \
 ../Core/Src/MyMain.cpp \
 ../Core/Src/Rtc.cpp \
 ../Core/Src/SdCard.cpp \
@@ -40,11 +38,9 @@ OBJS += \
 ./Core/Src/BUZ.o \
 ./Core/Src/Button.o \
 ./Core/Src/CLI.o \
-./Core/Src/CliCommand.o \
 ./Core/Src/DHT.o \
 ./Core/Src/Flash.o \
 ./Core/Src/LED.o \
-./Core/Src/Manager.o \
 ./Core/Src/MyMain.o \
 ./Core/Src/Rtc.o \
 ./Core/Src/SdCard.o \
@@ -61,11 +57,9 @@ CPP_DEPS += \
 ./Core/Src/BUZ.d \
 ./Core/Src/Button.d \
 ./Core/Src/CLI.d \
-./Core/Src/CliCommand.d \
 ./Core/Src/DHT.d \
 ./Core/Src/Flash.d \
 ./Core/Src/LED.d \
-./Core/Src/Manager.d \
 ./Core/Src/MyMain.d \
 ./Core/Src/Rtc.d \
 ./Core/Src/SdCard.d \
@@ -81,7 +75,7 @@ Core/Src/%.o Core/Src/%.su: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/BUZ.d ./Core/Src/BUZ.o ./Core/Src/BUZ.su ./Core/Src/Button.d ./Core/Src/Button.o ./Core/Src/Button.su ./Core/Src/CLI.d ./Core/Src/CLI.o ./Core/Src/CLI.su ./Core/Src/CliCommand.d ./Core/Src/CliCommand.o ./Core/Src/CliCommand.su ./Core/Src/DHT.d ./Core/Src/DHT.o ./Core/Src/DHT.su ./Core/Src/Flash.d ./Core/Src/Flash.o ./Core/Src/Flash.su ./Core/Src/LED.d ./Core/Src/LED.o ./Core/Src/LED.su ./Core/Src/Manager.d ./Core/Src/Manager.o ./Core/Src/Manager.su ./Core/Src/MyMain.d ./Core/Src/MyMain.o ./Core/Src/MyMain.su ./Core/Src/Rtc.d ./Core/Src/Rtc.o ./Core/Src/Rtc.su ./Core/Src/SdCard.d ./Core/Src/SdCard.o ./Core/Src/SdCard.su ./Core/Src/commTask.d ./Core/Src/commTask.o ./Core/Src/commTask.su ./Core/Src/freertos.d ./Core/Src/freertos.o ./Core/Src/freertos.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32l4xx_hal_msp.d ./Core/Src/stm32l4xx_hal_msp.o ./Core/Src/stm32l4xx_hal_msp.su ./Core/Src/stm32l4xx_it.d ./Core/Src/stm32l4xx_it.o ./Core/Src/stm32l4xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32l4xx.d ./Core/Src/system_stm32l4xx.o ./Core/Src/system_stm32l4xx.su
+	-$(RM) ./Core/Src/BUZ.d ./Core/Src/BUZ.o ./Core/Src/BUZ.su ./Core/Src/Button.d ./Core/Src/Button.o ./Core/Src/Button.su ./Core/Src/CLI.d ./Core/Src/CLI.o ./Core/Src/CLI.su ./Core/Src/DHT.d ./Core/Src/DHT.o ./Core/Src/DHT.su ./Core/Src/Flash.d ./Core/Src/Flash.o ./Core/Src/Flash.su ./Core/Src/LED.d ./Core/Src/LED.o ./Core/Src/LED.su ./Core/Src/MyMain.d ./Core/Src/MyMain.o ./Core/Src/MyMain.su ./Core/Src/Rtc.d ./Core/Src/Rtc.o ./Core/Src/Rtc.su ./Core/Src/SdCard.d ./Core/Src/SdCard.o ./Core/Src/SdCard.su ./Core/Src/commTask.d ./Core/Src/commTask.o ./Core/Src/commTask.su ./Core/Src/freertos.d ./Core/Src/freertos.o ./Core/Src/freertos.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32l4xx_hal_msp.d ./Core/Src/stm32l4xx_hal_msp.o ./Core/Src/stm32l4xx_hal_msp.su ./Core/Src/stm32l4xx_it.d ./Core/Src/stm32l4xx_it.o ./Core/Src/stm32l4xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32l4xx.d ./Core/Src/system_stm32l4xx.o ./Core/Src/system_stm32l4xx.su
 
 .PHONY: clean-Core-2f-Src
 

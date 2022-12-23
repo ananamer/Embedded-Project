@@ -24,16 +24,16 @@ typedef enum _dhtState
 
 class DHT {
 private:
-	DHT_STATE state;
-	GPIO_TypeDef* GPIOx;
-	uint16_t GPIO_Pin;
-	int counter;
+
+	DHT_STATE      state;
+	GPIO_TypeDef*  GPIOx;
+	uint16_t    GPIO_Pin;
 	uint32_t lastFalling;
-	double temperature;
+	int          counter;
+	double   temperature;
 
 
-	void setGpioOutput();
-	void setGpioExti();
+
 
 public:
 

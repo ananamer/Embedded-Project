@@ -8,7 +8,6 @@
 #ifndef SRC_COMMTASK_H_
 #define SRC_COMMTASK_H_
 #include "main.h"
-//#include "CliCommand.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -22,10 +21,6 @@ void commTask();
 int communication();
 void handleCommand();
 void printCommands();
-
-
-//int _write(int fd, char* ptr, int len);
-//void registerCommand(const char * name, CliCommand * command);
 
 
 

@@ -11,7 +11,6 @@
 #include "commTask.h"
 #include "main.h"
 
-extern int myGlobalVariable;
 
 
 typedef struct _reg_comm
@@ -22,11 +21,15 @@ typedef struct _reg_comm
 
 
 class CLI {
+
 	int commandsCount = 0;
 	REG_COMM container[MAX_COMMANDS];
+
 public:
+
 	CLI();
 	virtual ~CLI();
+
 	void CliInit();
 	void registerCommand(const char * name, CliCommand * command);
 	void performCommand(char* cmd, char* param);

@@ -177,25 +177,4 @@ void DHT::Dht_read()
 }
 
 
-void DHT::setGpioOutput()
-{
-	GPIO_InitTypeDef gpioStruct = {0};
 
-	gpioStruct.Pin  = GPIO_Pin;
-	gpioStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	gpioStruct.Pull = GPIO_NOPULL;
-
-	HAL_GPIO_Init(GPIOx, &gpioStruct);
-}
-void DHT::setGpioExti()
-{
-	GPIO_InitTypeDef gpioStruct = {0};
-
-	gpioStruct.Pin  = GPIO_Pin;
-	gpioStruct.Mode = GPIO_MODE_IT_FALLING;
-	gpioStruct.Pull = GPIO_PULLUP;
-
-	HAL_GPIO_Init(GPIOx, &gpioStruct);
-	HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
-
-}

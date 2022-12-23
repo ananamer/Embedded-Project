@@ -1,5 +1,5 @@
-Core/Src/MyMain.o: ../Core/Src/MyMain.cpp ../Core/Inc/MyMain.h \
- ../Core/Inc/main.h ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
+Core/Src/MyMain.o: ../Core/Src/MyMain.cpp ../Core/Inc/main.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
@@ -31,10 +31,6 @@ Core/Src/MyMain.o: ../Core/Src/MyMain.cpp ../Core/Inc/MyMain.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- ../Core/Inc/CliCommand.h ../Core/Inc/main.h ../Core/Inc/commTask.h \
- ../Core/Inc/LED.h ../Core/Inc/CLI.h ../Core/Inc/CliCommand.h \
- ../Core/Inc/commTask.h ../Core/Inc/BUZ.h ../Core/Inc/Button.h \
- ../Core/Inc/DHT.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
@@ -46,14 +42,17 @@ Core/Src/MyMain.o: ../Core/Src/MyMain.cpp ../Core/Inc/MyMain.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- ../Core/Inc/Flash.h ../Core/Inc/Rtc.h ../Core/Inc/DateTime.h \
- ../Core/Inc/DateTime.h ../Core/Inc/Manager.h ../Core/Inc/SdCard.h \
- ../FATFS/App/fatfs.h ../Middlewares/Third_Party/FatFs/src/ff.h \
+ ../Core/Inc/MyMain.h ../Core/Inc/main.h ../Core/Inc/CliCommand.h \
+ ../Core/Inc/commTask.h ../Core/Inc/LED.h ../Core/Inc/CLI.h \
+ ../Core/Inc/CliCommand.h ../Core/Inc/commTask.h ../Core/Inc/BUZ.h \
+ ../Core/Inc/Button.h ../Core/Inc/DHT.h ../Core/Inc/Flash.h \
+ ../Core/Inc/Rtc.h ../Core/Inc/DateTime.h ../Core/Inc/DateTime.h \
+ ../Core/Inc/Manager.h ../Core/Inc/SdCard.h ../FATFS/App/fatfs.h \
+ ../Middlewares/Third_Party/FatFs/src/ff.h \
  ../Middlewares/Third_Party/FatFs/src/integer.h ../FATFS/Target/ffconf.h \
  ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/user_diskio.h
-../Core/Inc/MyMain.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -87,16 +86,6 @@ Core/Src/MyMain.o: ../Core/Src/MyMain.cpp ../Core/Inc/MyMain.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-../Core/Inc/CliCommand.h:
-../Core/Inc/main.h:
-../Core/Inc/commTask.h:
-../Core/Inc/LED.h:
-../Core/Inc/CLI.h:
-../Core/Inc/CliCommand.h:
-../Core/Inc/commTask.h:
-../Core/Inc/BUZ.h:
-../Core/Inc/Button.h:
-../Core/Inc/DHT.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -108,6 +97,17 @@ Core/Src/MyMain.o: ../Core/Src/MyMain.cpp ../Core/Inc/MyMain.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+../Core/Inc/MyMain.h:
+../Core/Inc/main.h:
+../Core/Inc/CliCommand.h:
+../Core/Inc/commTask.h:
+../Core/Inc/LED.h:
+../Core/Inc/CLI.h:
+../Core/Inc/CliCommand.h:
+../Core/Inc/commTask.h:
+../Core/Inc/BUZ.h:
+../Core/Inc/Button.h:
+../Core/Inc/DHT.h:
 ../Core/Inc/Flash.h:
 ../Core/Inc/Rtc.h:
 ../Core/Inc/DateTime.h:

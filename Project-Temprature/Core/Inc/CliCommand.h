@@ -13,10 +13,14 @@ class CliCommand
 
 
 public:
-	CliCommand();
-	virtual ~CliCommand();
+
+	CliCommand(){};
+	virtual ~CliCommand(){};
+
 	virtual void doCommand(const char* param) = 0 ; // pure virtual function
 
 };
 
 #endif /* SRC_CLICOMMAND_H_ */
+
+

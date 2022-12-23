@@ -1,3 +1,0 @@
-../Core/Src/CliCommand.cpp:14:1:CliCommand::CliCommand()	16	static
-../Core/Src/CliCommand.cpp:19:1:CliCommand::~CliCommand()	16	static
-../Core/Src/CliCommand.cpp:19:1:virtual CliCommand::~CliCommand()	16	static

@@ -19,4 +19,4 @@ Button::Button(GPIO_TypeDef* gpiox, uint16_t gpio_pin)
 	GPIOx = gpiox;
 	GPIO_Pin = gpio_pin;
 }
-
+// add the stop buzzer function

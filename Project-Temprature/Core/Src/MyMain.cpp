@@ -4,23 +4,26 @@
  *  Created on: Nov 17, 2022
  *      Author: student
  */
+#include <stdlib.h>
+#include <string.h>
+#include  <stdio.h>
+
+#include "main.h"
+#include "cmsis_os.h"
 #include "MyMain.h"
 #include "CliCommand.h"
-#include "main.h"
 #include "commTask.h"
+
 #include "LED.h"
 #include "CLI.h"
-#include <stdio.h>
 #include "BUZ.h"
 #include "Button.h"
 #include "DHT.h"
-#include "cmsis_os.h"
 #include "Flash.h"
 #include "Rtc.h"
+
 #include "DateTime.h"
 #include "Manager.h"
-#include <stdlib.h>
-#include <string.h>
 #include "SdCard.h"
 
 extern TIM_HandleTypeDef htim3;
@@ -189,7 +192,6 @@ void mainTask()
 
 }
 
-
 void LogWriteTask()
 {
 	osDelay(1000);
@@ -208,21 +210,6 @@ void LedTask()
 		redLed.LedBlink();
 	}
 }
-
-
-// No need for this func
-// [DELETE]
-void measureTemp(void *argument)
-{
-	while(1){
-//		dht.Dht_read();
-		// TODO ------------------------------------------------------
-		// this only prints the temp, I need to write it to the flash
-	}
-	osDelay(10000);
-}
-
-
 
 void HAL_GPIO_EXTI_Callback(uint16_t pin)
 {
@@ -264,7 +251,3 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin)
  *
  *
  * */
-
-
-
-

@@ -26,7 +26,6 @@ extern SdCard* LogSdCard;
 extern char RecordsArr[50][100];
 
 extern int numOfRecords;
-int myGlobalVariable = 0;
 
 CLI::CLI() {
 	// TODO Auto-generated constructor stub

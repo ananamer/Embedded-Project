@@ -23,11 +23,13 @@ class Manager {
 	SYSTEM_STATE State;
 
 public:
+
 	Manager();
 	Manager(SYSTEM_STATE _state)
 	{
 		State = _state;
 	}
+
 	SYSTEM_STATE getState(){return State;}
 	void setState(SYSTEM_STATE _state)
 	{
@@ -40,10 +42,4 @@ public:
 #endif /* SRC_MANAGER_H_ */
 
 
-//////
-/*
- * LogRecord.h
- *
- *  Created on: Nov 27, 2022
- *      Author: student
- */
+

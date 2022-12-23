@@ -21,12 +21,13 @@ typedef enum _buzState
 class BUZ {
 
 	BUZ_STATE State = BUZ_OFF;
-//	int counter;
-//	int maxCounter;
+
 public:
+
 	BUZ();
 	BUZ(BUZ_STATE state);
 	virtual ~BUZ();
+
 	void buzzStart();
 	void buzzStop();
 

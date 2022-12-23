@@ -20,11 +20,8 @@ extern "C" {
 
 void my_main();
 void HAL_GPIO_EXTI_Callback(uint16_t pin);
-void measureTemp(void *argument);
-void monitorInit();
 void LedTask();
 void dhtTask();
-void TimeTask();
 void mainTask();
 void LogWriteTask();
 
